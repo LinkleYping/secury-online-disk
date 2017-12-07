@@ -1,0 +1,8 @@
+create user 'OnlineDiskServer'@'localhost' identified by '3rf3rh93g379r';
+grant all on *.* to 'OnlineDiskServer'@'localhost';
+create database OnlineServerData;
+use OnlineServerData;
+create table user(Nickname varchar(10),mail varchar(30),password varchar(30));
+create table capacity(mail varchar(30),Used varchar(20),Total varchar(20));
+create table log(Username varchar(30),Filename varchar(30),FileSize varchar(30));
+create table hash(Username varchar(30),Filename varchar(30),RemoteRoute varchar(128),hash varchar(128));
